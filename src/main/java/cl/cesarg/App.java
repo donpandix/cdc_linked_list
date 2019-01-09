@@ -15,7 +15,8 @@ public class App {
      * @param args  por el momento no las usa
      */
     public static void main( String[] args ) {
-        System.out.println("Crea una lista enlazada");
+
+        System.out.println("\nCrea una lista enlazada");
 
         int[] lista_valores = {1,2,3,4,5,6,7,8,9,90,100,30,22};
         Node lista = null;
@@ -28,14 +29,14 @@ public class App {
         }
         lista.listado();
 
-        System.out.println("");
-        System.out.println("Elimina elemento");
+        System.out.println("\nElimina elementos {100, 1, 22, 5}");
 
-        lista = lista.deleteNode(lista, 100);
+        lista.deleteNode(100);
+        lista.deleteNode(1);
+        lista.deleteNode(22);
+        lista.deleteNode(5);
 
         lista.listado();
-
-
 
     }
 }

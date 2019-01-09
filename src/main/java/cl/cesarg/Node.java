@@ -24,20 +24,20 @@ public class Node {
     }
 
     // elimina un elemento del arreglo por su valor
-    public Node deleteNode (Node head, int value) {
+    public Node deleteNode (int value) {
         // Puntero temporal al arreglo
-        Node n = head;
+        Node n = this;
         // En caso que el elemento a eliminar sea el primero
         if (n.value == value) return n.next;
         // Si el elemento a eliminar está en otro punto
-        while (n.next != null) {
+        while (n != null && n.next != null) {
             if (n.next.value == value) {
                 n.next = n.next.next;
             }
             n = n.next;
         }
 
-        return head;
+        return this;
     }
 
 
