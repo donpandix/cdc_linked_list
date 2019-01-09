@@ -30,9 +30,10 @@ public class Node {
         // En caso que el elemento a eliminar sea el primero
         if (n.value == value) return n.next;
         // Si el elemento a eliminar está en otro punto
-        while (n != null && n.next != null) {
+        while (n.next != null) {
             if (n.next.value == value) {
                 n.next = n.next.next;
+                return this;
             }
             n = n.next;
         }
